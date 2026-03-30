@@ -1,20 +1,4 @@
-@font-face {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../assets/fonts/mulish/Mulish-500-cyrillic.woff2") format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../assets/fonts/mulish/Mulish-500-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,233 +9,88 @@
   outline: none;
 }
 
-body {
+body,
+html {
   background-color: #f3f3f3;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.site-header {
-  width: 1500px;
-  height: 151px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.site-header__top {
-  height: 101px;
-  background-color: #404040;
-  position: relative;
-}
-
-.site-header__top-inner {
+.container {
   width: 1290px;
-  height: 50px;
-  margin-top: 23px;
-  margin-left: 106px;
+  margin: auto;
+}
+
+.header .header__top {
+  background: #404040;
+  padding: 23px 0 28px;
+}
+.header .header__top .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.site-header__top-logo-slot {
+.header .header__logo {
   width: 178px;
-  height: 40px;
+  position: relative;
 }
-
-.site-header__logo-link {
+.header .header__logo img {
   width: 100%;
-  height: 100%;
-  display: block;
 }
-
-.site-header__logo-image {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.site-header__top-content {
-  width: 669px;
-  height: 50px;
+.header .header__top-content {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-
-.site-header__top-content-item {
-  height: 50px;
+.header .header-link {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
-
-.site-header__top-content-item--search {
-  width: 191.03px;
-  height: 28px;
-}
-
-.site-header__search {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #ffffff;
-}
-
-.site-header__search-icon-slot {
-  width: 23.03px;
-  height: 23px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.site-header__search-icon {
-  width: 21px;
-  height: 21px;
-  display: block;
-}
-
-.site-header__search-text {
-  width: 163px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  font-family: "Mulish", Arial, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 0;
-  text-align: center;
-  color: #ffffff;
-}
-
-.site-header__top-content-item--contact {
-  width: 202px;
-  height: 28px;
-}
-
-.site-header__phone {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #ffffff;
-}
-
-.site-header__phone-icon {
+.header .header-link svg {
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
+  margin-top: 5px;
 }
-
-.site-header__phone-text {
-  width: 173px;
-  height: 28px;
+.header .header-link .header__search-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+}
+.header .header__callback-button {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+  border-radius: 100px;
+  padding: 10px 30px;
+  background: #9c9175;
+}
+.header .header__bottom {
+  background: #9c9175;
+  padding: 15px;
+}
+.header .header__bottom .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  font-family: "Mulish", Arial, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 0;
-  text-align: center;
-  color: #ffffff;
 }
-
-.site-header__callback-button {
-  width: 216px;
-  height: 50px;
-  padding: 10px 30px;
-  border-radius: 100px;
-  background-color: #9c9175;
-  color: #ffffff;
-  font-family: "Mulish", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 0;
-  text-align: center;
-  cursor: pointer;
-}
-
-.site-header__bottom {
-  height: 50px;
-  background-color: #9c9175;
-}
-
-.site-header__bottom-inner {
-  width: 938px;
-  height: 20px;
-  margin-top: 15px;
-  margin-left: 281px;
+.header .header__bottom nav {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-
-.site-header__menu-link {
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  color: #ffffff;
-  font-family: "Mulish", Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
+.header .header__bottom nav a {
+  font-family: "Mulish", sans-serif;
   font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0;
+  font-size: 16px;
   text-align: center;
-  transition: color 0.2s ease;
+  color: #fff;
 }
 
-.site-header__menu-link:hover {
-  color: #f3efe8;
-}
-
-.site-header__menu-link:active {
-  color: #ece2d3;
-}
-
-.site-header__menu-link:focus-visible {
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
-}
-
-.site-header__menu-link--entrance {
-  width: 121px;
-}
-
-.site-header__menu-link--interior {
-  width: 174px;
-}
-
-.site-header__menu-link--furniture {
-  width: 88px;
-}
-
-.site-header__menu-link--company {
-  width: 98px;
-}
-
-.site-header__menu-link--services {
-  width: 53px;
-}
-
-.site-header__menu-link--delivery {
-  width: 149px;
-}
-
-.site-header__menu-link--contacts {
-  width: 75px;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
