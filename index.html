@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__top">
+            <div class="site-header__top-inner">
+                <div class="site-header__top-logo-slot">
+                    <a class="site-header__logo-link" href="#" aria-label="На главную">
+                        <img class="site-header__logo-image" src="./assets/imgs/header/logo.svg" alt="Двери Trend">
+                    </a>
+                </div>
+                <div class="site-header__top-content">
+                    <div class="site-header__top-content-item site-header__top-content-item--search">
+                        <a class="site-header__search" href="#" aria-label="Поиск по сайту">
+                            <span class="site-header__search-icon-slot" aria-hidden="true">
+                                <svg class="site-header__search-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.9516 18.8757L15.2735 14.2038H15.2231C16.6651 12.5059 17.3937 10.317 17.2567 8.09491C17.1197 5.87283 16.1276 3.78973 14.488 2.28136C12.8484 0.77298 10.6883 -0.0438206 8.45949 0.00181421C6.2307 0.047449 4.1059 0.951984 2.52958 2.52621C0.953255 4.10043 0.0475123 6.22239 0.00181663 8.44821C-0.0438791 10.674 0.774012 12.8313 2.2844 14.4687C3.79479 16.1061 5.88067 17.0969 8.10572 17.2337C10.3308 17.3705 12.5226 16.6428 14.2227 15.2028C14.2227 15.2028 14.2227 15.2388 14.2227 15.2531L18.9009 19.925C18.9678 19.9924 19.0474 20.0459 19.1351 20.0824C19.2228 20.1188 19.3168 20.1376 19.4118 20.1376C19.5069 20.1376 19.6009 20.1188 19.6886 20.0824C19.7763 20.0459 19.8559 19.9924 19.9228 19.925C19.9966 19.8598 20.0562 19.7801 20.0979 19.6909C20.1396 19.6017 20.1625 19.505 20.1652 19.4066C20.1679 19.3082 20.1503 19.2103 20.1136 19.119C20.0769 19.0276 20.0217 18.9448 19.9516 18.8757ZM8.64499 15.7922C7.22154 15.7922 5.83005 15.3707 4.6465 14.5809C3.46294 13.7911 2.54047 12.6686 1.99574 11.3552C1.45101 10.0419 1.30848 8.59674 1.58618 7.2025C1.86388 5.80826 2.54934 4.52757 3.55587 3.52238C4.56241 2.51719 5.84481 1.83265 7.24091 1.55532C8.63701 1.27799 10.0841 1.42032 11.3992 1.96433C12.7143 2.50833 13.8383 3.42957 14.6292 4.61155C15.42 5.79353 15.8421 7.18316 15.8421 8.60471C15.8421 9.54859 15.6559 10.4832 15.2942 11.3552C14.9326 12.2273 14.4024 13.0196 13.7341 13.687C13.0658 14.3545 12.2724 14.8839 11.3992 15.2451C10.526 15.6063 9.59013 15.7922 8.64499 15.7922Z" fill="#FFFFFF"/>
+                                </svg>
+                            </span>
+                            <span class="site-header__search-text">Поиск по сайту</span>
+                        </a>
+                    </div>
+                    <div class="site-header__top-content-item site-header__top-content-item--contact">
+                        <a class="site-header__phone" href="tel:+79080000000" aria-label="Позвонить +7 (908) 00-00-00">
+                            <svg class="site-header__phone-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.2475 16.11L16.9275 14.43C17.1538 14.2065 17.44 14.0536 17.7516 13.9897C18.0631 13.9257 18.3865 13.9537 18.6825 14.07L20.73 14.8875C21.0291 15.0089 21.2856 15.2161 21.4671 15.4831C21.6486 15.75 21.747 16.0647 21.75 16.3875V20.1375C21.7482 20.3571 21.7021 20.574 21.6143 20.7753C21.5265 20.9766 21.3989 21.158 21.2391 21.3087C21.0793 21.4593 20.8907 21.5761 20.6847 21.6519C20.4786 21.7278 20.2593 21.7611 20.04 21.75C5.69248 20.8575 2.79748 8.7075 2.24998 4.0575C2.22456 3.82915 2.24778 3.59801 2.31811 3.37928C2.38844 3.16055 2.50429 2.95919 2.65803 2.78845C2.81177 2.61771 2.99992 2.48145 3.2101 2.38865C3.42028 2.29584 3.64772 2.24859 3.87748 2.25H7.49998C7.82324 2.25096 8.13881 2.3486 8.40612 2.53037C8.67344 2.71214 8.88025 2.96973 8.99998 3.27L9.81748 5.3175C9.93767 5.6123 9.96833 5.93598 9.90564 6.24811C9.84295 6.56024 9.68968 6.84697 9.46498 7.0725L7.78498 8.7525C7.78498 8.7525 8.75248 15.3 15.2475 16.11Z" fill="#FFFFFF"/>
+                            </svg>
+                            <span class="site-header__phone-text">+7 (908) 00-00-00</span>
+                        </a>
+                    </div>
+                    <div class="site-header__top-content-item site-header__top-content-item--callback">
+                        <button class="site-header__callback-button" type="button">Обратная связь</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-header__bottom">
+            <nav class="site-header__bottom-inner" aria-label="Навигация по сайту">
+                <a class="site-header__menu-link site-header__menu-link--entrance" href="#">Входные двери</a>
+                <a class="site-header__menu-link site-header__menu-link--interior" href="#">Межкомнатные двери</a>
+                <a class="site-header__menu-link site-header__menu-link--furniture" href="#">Фурнитура</a>
+                <a class="site-header__menu-link site-header__menu-link--company" href="#">О компании</a>
+                <a class="site-header__menu-link site-header__menu-link--services" href="#">Услуги</a>
+                <a class="site-header__menu-link site-header__menu-link--delivery" href="#">Доставка и оплата</a>
+                <a class="site-header__menu-link site-header__menu-link--contacts" href="#">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
