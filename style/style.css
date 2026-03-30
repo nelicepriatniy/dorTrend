@@ -85,7 +85,8 @@ html {
   align-items: center;
   gap: 30px;
 }
-.header .header__bottom nav a {
+
+.nav-item {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
