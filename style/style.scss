@@ -136,3 +136,143 @@ html {
   text-align: center;
   color: $white;
 }
+
+.footer {
+  background: #404040;
+  color: $white;
+  padding: 63px 0 24px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__description-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $white;
+    margin: 0;
+  }
+
+  .footer__badge {
+    margin-top: 30px;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #9c9175;
+  }
+
+  .footer__details {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 158px;
+    min-height: 55px;
+  }
+
+  .footer__details-text {
+    display: block;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $white;
+  }
+
+  .footer__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer__columns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer__menu-title,
+  .footer__catalog-title,
+  .footer__contacts-title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: $white;
+    margin: 0;
+  }
+
+  .footer__menu {
+    margin-right: 70px;
+    width: 149px;
+    min-height: 160px;
+  }
+
+  .footer__catalog {
+    margin-right: 95px;
+  }
+
+  .footer__menu-inner,
+  .footer__catalog-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .footer__menu-text,
+  .footer__catalog-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer__contacts {
+    min-width: 0;
+  }
+
+  .footer__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer__contact-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--phone svg {
+      display: block;
+    }
+  }
+
+  .footer__contact-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: $white;
+  }
+}
