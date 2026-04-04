@@ -780,7 +780,8 @@ html {
   }
 }
 
-.catalog {
+.catalog,
+.furniture {
   .catalog-heading {
     font-family: $font-family;
     font-weight: 400;
@@ -917,6 +918,14 @@ html {
             color: #404040;
             margin-bottom: 15px;
           }
+
+          .attribute {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            color: #404040;
+            margin-bottom: 15px;
+          }
         }
       }
     }
@@ -1011,6 +1020,50 @@ html {
     line-height: 140%;
     color: #404040;
     list-style: inside;
+  }
+
+}
+
+.text-section {
+  margin-bottom: 60px;
+
+  .container {
+    display: flex;
+    gap: 156px;
+  }
+
+  h1 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: #404040;
+  }
+
+  p {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: #404040;
+  }
+}
+
+.furniture {
+
+  .catalog-right {
+    .catalog-list {
+      .item {
+        .info {
+          .name {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 16px;
+            color: #404040;
+          }
+        }
+      }
+    }
   }
 
 }

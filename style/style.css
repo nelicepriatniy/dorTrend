@@ -650,7 +650,8 @@ html {
   color: #404040;
 }
 
-.catalog .catalog-heading {
+.catalog .catalog-heading,
+.furniture .catalog-heading {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 32px;
@@ -658,21 +659,25 @@ html {
   margin-bottom: 60px;
   color: #404040;
 }
-.catalog .catalog-wrapper {
+.catalog .catalog-wrapper,
+.furniture .catalog-wrapper {
   display: flex;
   gap: 140px;
 }
-.catalog .catalog-filter {
+.catalog .catalog-filter,
+.furniture .catalog-filter {
   width: 100%;
   max-width: 300px;
 }
-.catalog .catalog-filter .item {
+.catalog .catalog-filter .item,
+.furniture .catalog-filter .item {
   border-radius: 20px;
   padding: 30px;
   background: #ebebeb;
   margin-bottom: 5px;
 }
-.catalog .catalog-filter .item .heading {
+.catalog .catalog-filter .item .heading,
+.furniture .catalog-filter .item .heading {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -680,26 +685,32 @@ html {
   color: #404040;
   margin-bottom: 15px;
 }
-.catalog .catalog-filter .item .list {
+.catalog .catalog-filter .item .list,
+.furniture .catalog-filter .item .list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.catalog .catalog-filter .item .list-item {
+.catalog .catalog-filter .item .list-item,
+.furniture .catalog-filter .item .list-item {
   display: flex;
   justify-content: space-between;
 }
 .catalog .catalog-filter .item .list-item .name,
-.catalog .catalog-filter .item .list-item .num {
+.catalog .catalog-filter .item .list-item .num,
+.furniture .catalog-filter .item .list-item .name,
+.furniture .catalog-filter .item .list-item .num {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #404040;
 }
-.catalog .catalog-filter .need-help {
+.catalog .catalog-filter .need-help,
+.furniture .catalog-filter .need-help {
   margin-top: 25px;
 }
-.catalog .catalog-filter .need-help .heading {
+.catalog .catalog-filter .need-help .heading,
+.furniture .catalog-filter .need-help .heading {
   font-family: "Mulish", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -707,7 +718,8 @@ html {
   color: #404040;
   margin-bottom: 15px;
 }
-.catalog .catalog-filter .need-help .text {
+.catalog .catalog-filter .need-help .text,
+.furniture .catalog-filter .need-help .text {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -715,13 +727,15 @@ html {
   color: #404040;
   margin-bottom: 15px;
 }
-.catalog .catalog-right .catalog-select {
+.catalog .catalog-right .catalog-select,
+.furniture .catalog-right .catalog-select {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-bottom: 60px;
 }
-.catalog .catalog-right .catalog-select .item {
+.catalog .catalog-right .catalog-select .item,
+.furniture .catalog-right .catalog-select .item {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -731,34 +745,41 @@ html {
   background: #ebebeb;
   display: block;
 }
-.catalog .catalog-right .catalog-select .item.active {
+.catalog .catalog-right .catalog-select .item.active,
+.furniture .catalog-right .catalog-select .item.active {
   background: #404040;
   color: white;
 }
-.catalog .catalog-right .catalog-list {
+.catalog .catalog-right .catalog-list,
+.furniture .catalog-right .catalog-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
-.catalog .catalog-right .catalog-list .item {
+.catalog .catalog-right .catalog-list .item,
+.furniture .catalog-right .catalog-list .item {
   border-radius: 20px;
   background: #ebebeb;
 }
-.catalog .catalog-right .catalog-list .item img {
+.catalog .catalog-right .catalog-list .item img,
+.furniture .catalog-right .catalog-list .item img {
   width: 100%;
   border-radius: 20px;
 }
-.catalog .catalog-right .catalog-list .item .info {
+.catalog .catalog-right .catalog-list .item .info,
+.furniture .catalog-right .catalog-list .item .info {
   padding: 10px;
 }
-.catalog .catalog-right .catalog-list .item .info .name {
+.catalog .catalog-right .catalog-list .item .info .name,
+.furniture .catalog-right .catalog-list .item .info .name {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #404040;
   margin-bottom: 15px;
 }
-.catalog .catalog-right .catalog-list .item .info .price {
+.catalog .catalog-right .catalog-list .item .info .price,
+.furniture .catalog-right .catalog-list .item .info .price {
   font-family: "Mulish", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -766,23 +787,35 @@ html {
   color: #404040;
   margin-bottom: 15px;
 }
-.catalog .catalog-right .catalog-pagination {
+.catalog .catalog-right .catalog-list .item .info .attribute,
+.furniture .catalog-right .catalog-list .item .info .attribute {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #404040;
+  margin-bottom: 15px;
+}
+.catalog .catalog-right .catalog-pagination,
+.furniture .catalog-right .catalog-pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 60px;
 }
-.catalog .catalog-right .catalog-pagination .nums {
+.catalog .catalog-right .catalog-pagination .nums,
+.furniture .catalog-right .catalog-pagination .nums {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
-.catalog .catalog-right .catalog-pagination .pag-wrapper {
+.catalog .catalog-right .catalog-pagination .pag-wrapper,
+.furniture .catalog-right .catalog-pagination .pag-wrapper {
   display: flex;
   align-items: center;
 }
-.catalog .catalog-right .catalog-pagination .pag-wrapper .num {
+.catalog .catalog-right .catalog-pagination .pag-wrapper .num,
+.furniture .catalog-right .catalog-pagination .pag-wrapper .num {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -795,11 +828,14 @@ html {
   align-items: center;
   justify-content: center;
 }
-.catalog .catalog-right .catalog-pagination .pag-wrapper .num.active {
+.catalog .catalog-right .catalog-pagination .pag-wrapper .num.active,
+.furniture .catalog-right .catalog-pagination .pag-wrapper .num.active {
   background: #ebebeb;
 }
 .catalog .catalog-right .catalog-pagination .arrow-prev,
-.catalog .catalog-right .catalog-pagination .arrow-next {
+.catalog .catalog-right .catalog-pagination .arrow-next,
+.furniture .catalog-right .catalog-pagination .arrow-prev,
+.furniture .catalog-right .catalog-pagination .arrow-next {
   border-radius: 100px;
   width: 30px;
   height: 30px;
@@ -808,7 +844,8 @@ html {
   align-items: center;
   justify-content: center;
 }
-.catalog .catalog-right .catalog-pagination .arrow-next svg {
+.catalog .catalog-right .catalog-pagination .arrow-next svg,
+.furniture .catalog-right .catalog-pagination .arrow-next svg {
   rotate: 180deg;
 }
 
@@ -842,6 +879,35 @@ html {
   line-height: 140%;
   color: #404040;
   list-style: inside;
+}
+
+.text-section {
+  margin-bottom: 60px;
+}
+.text-section .container {
+  display: flex;
+  gap: 156px;
+}
+.text-section h1 {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #404040;
+}
+.text-section p {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #404040;
+}
+
+.furniture .catalog-right .catalog-list .item .info .name {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #404040;
 }
 
 /*# sourceMappingURL=style.css.map */
