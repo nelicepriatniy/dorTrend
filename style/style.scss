@@ -32,6 +32,34 @@ $text-black-500: #121212;
 $text-black-300: #474747;
 $bg-gray: #f8f8f8;
 $bg-black: #292929;
+$text-primary: #404040;
+$info-card-bg: #ebebeb;
+$info-card-radius: 18px;
+$info-card-padding: 28px 32px;
+
+// Общая типографика шаблона (как .regular-text / заголовки в макете)
+%regular-text {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.regular-text {
+  @extend %regular-text;
+}
+
+%page-heading {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+.page-heading {
+  @extend %page-heading;
+}
 
 body,
 html {
@@ -46,6 +74,8 @@ html {
 }
 
 .page-delivery {
+  font-family: $font-family;
+  color: $text-primary;
   background: $white;
   padding-top: 30px;
   padding-bottom: 80px;
@@ -59,12 +89,10 @@ html {
 
   &__title {
     margin: 0;
-    font-family: $font-family;
+    text-align: left;
     font-weight: 400;
     font-size: 32px;
     line-height: 1.2;
-    text-align: left;
-    color: #404040;
   }
 
   &__cards {
@@ -73,114 +101,106 @@ html {
     gap: 30px;
     margin-top: 60px;
   }
-}
 
-.info-card {
-  flex: 1 1 280px;
-  min-width: 0;
-  background: #ebebeb;
-  border-radius: 18px;
-  padding: 28px 32px;
-}
+  .info-card {
+    flex: 1 1 280px;
+    min-width: 0;
+    background: $info-card-bg;
+    border-radius: $info-card-radius;
+    padding: $info-card-padding;
+  }
 
-.info-card--delivery,
-.info-card--payment {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 30px;
-
-  .info-card__icon {
-    flex-shrink: 0;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    background: $white;
+  .info-card--delivery,
+  .info-card--payment {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
 
-    svg {
-      display: block;
-    }
-  }
+    .info-card__icon {
+      flex-shrink: 0;
+      width: 70px;
+      height: 70px;
+      border-radius: 100px;
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  .info-card__title {
-    margin: 15px 0 0;
-    font-family: $font-family;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.4;
-    color: #404040;
-  }
-
-  .info-card__text {
-    margin: 0;
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.4;
-    color: #404040;
-
-    &:first-of-type {
-      margin-top: 15px;
+      svg {
+        display: block;
+      }
     }
 
-    & + & {
+    .info-card__title {
+      margin: 15px 0 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    .info-card__text {
+      margin: 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.4;
+
+      &:first-of-type {
+        margin-top: 15px;
+      }
+    }
+
+    .info-card__text + .info-card__text {
       margin-top: 12px;
     }
-  }
 
-  .info-card__list {
-    margin: 12px 0 0;
-    padding-left: 1.35em;
-    list-style: disc outside;
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.4;
-    color: #404040;
-
-    li {
+    .info-card__list {
+      margin: 12px 0 0;
+      padding-left: 1.35em;
       list-style: disc outside;
-      padding-left: 0.35em;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.4;
 
-      & + li {
-        margin-top: 12px;
+      li {
+        list-style: disc outside;
+        padding-left: 0.35em;
+
+        & + li {
+          margin-top: 12px;
+        }
       }
     }
   }
-}
 
-.breadcrumbs {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__item {
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;
-    color: #404040;
-
-    &:not(:last-child)::after {
-      content: " - ";
+  .breadcrumbs {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-  }
 
-  &__link {
-    color: inherit;
-    text-decoration: none;
-  }
+    &__item {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
 
-  &__current {
-    color: inherit;
+      &:not(:last-child)::after {
+        content: " - ";
+      }
+    }
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &__current {
+      color: inherit;
+    }
   }
 }
 
@@ -273,6 +293,7 @@ html {
 }
 
 .footer {
+  font-family: $font-family;
   background: #404040;
   color: $white;
   padding: 63px 0 24px;
@@ -289,7 +310,6 @@ html {
   }
 
   .footer__description-text {
-    font-family: $font-family;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
@@ -328,7 +348,6 @@ html {
   .footer__notice,
   .footer__copyright,
   .footer__policy {
-    font-family: $font-family;
     font-weight: 500;
     font-size: 16px;
     color: $white;
@@ -355,7 +374,6 @@ html {
   .footer__menu-title,
   .footer__catalog-title,
   .footer__contacts-title {
-    font-family: $font-family;
     font-weight: 500;
     font-size: 20px;
     line-height: 140%;
@@ -384,7 +402,6 @@ html {
 
   .footer__menu-text,
   .footer__catalog-text {
-    font-family: $font-family;
     font-weight: 500;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
