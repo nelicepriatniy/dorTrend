@@ -1,0 +1,54 @@
+const heroSlider = new Swiper('.hero-slider', {
+  speed: 400,
+  loop: true,
+  navigation: {
+    nextEl: '.hero-slider-next',
+    prevEl: '.hero-slider-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+const popular_m_slider = new Swiper('.popuplar-m-slider', {
+  speed: 400,
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  navigation: {
+    nextEl: '.popupar-m-slider-next',
+    prevEl: '.popupar-m-slider-prev',
+  },
+  pagination: {
+    el: '.popular-m.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+const popular_w_slider = new Swiper('.popuplar-w-slider', {
+  speed: 400,
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  navigation: {
+    nextEl: '.popupar-w-slider-next',
+    prevEl: '.popupar-w-slider-prev',
+  },
+  pagination: {
+    el: '.popular-w.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+const manufact_m_slider = new Swiper('.manufac-slider', {
+  speed: 400,
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 5,
+  navigation: {
+    nextEl: '.manufac-slider-prev',
+    prevEl: '.manufac-slider-next',
+  },
+});
+
