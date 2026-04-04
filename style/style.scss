@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
   text-decoration: none;
   border: none;
   outline: none;
@@ -779,4 +778,239 @@ html {
     font-size: 16px;
     color: #404040;
   }
+}
+
+.catalog {
+  .catalog-heading {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+
+    margin-bottom: 60px;
+    color: #404040;
+  }
+
+  .catalog-wrapper {
+    display: flex;
+    gap: 140px;
+  }
+
+  .catalog-filter {
+    width: 100%;
+    max-width: 300px;
+
+    .item {
+      border-radius: 20px;
+      padding: 30px;
+      background: #ebebeb;
+      margin-bottom: 5px;
+
+
+      .heading {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: #404040;
+        margin-bottom: 15px;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+
+        .name,
+        .num {
+          font-family: $font-family;
+          font-weight: 500;
+          font-size: 16px;
+          color: #404040;
+        }
+      }
+    }
+
+    .need-help {
+      margin-top: 25px;
+
+      .heading {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: #404040;
+        margin-bottom: 15px;
+      }
+
+      .text {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: #404040;
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  .catalog-right {
+    .catalog-select {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 60px;
+
+      .item {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 16px;
+        color: #404040;
+        border-radius: 100px;
+        padding: 25px 90px;
+        background: #ebebeb;
+        display: block;
+
+        &.active {
+          background: #404040;
+          color: white;
+        }
+      }
+    }
+
+    .catalog-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+
+      .item {
+        border-radius: 20px;
+        background: #ebebeb;
+
+        img {
+          width: 100%;
+          border-radius: 20px;
+        }
+
+        .info {
+          padding: 10px;
+
+          .name {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            color: #404040;
+            margin-bottom: 15px;
+          }
+
+          .price {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            color: #404040;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+
+    .catalog-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 60px;
+
+      .nums {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .pag-wrapper {
+        display: flex;
+        align-items: center;
+
+        .num {
+          font-family: $third-family;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 150%;
+          color: #404040;
+          border-radius: 100px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.active {
+            background: #ebebeb;
+          }
+        }
+      }
+
+      .arrow-prev,
+      .arrow-next {
+        border-radius: 100px;
+        width: 30px;
+        height: 30px;
+        background: #9c9175;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .arrow-next {
+        svg {
+          rotate: 180deg;
+        }
+      }
+    }
+  }
+}
+
+.seo-text {
+  padding: 80px 0;
+
+  * {
+    margin-bottom: 0.5em;
+  }
+
+  h4 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: #404040;
+  }
+
+  h2 {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  p,
+  li,
+  ol,
+  ul {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #404040;
+    list-style: inside;
+  }
+
 }
