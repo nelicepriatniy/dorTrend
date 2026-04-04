@@ -169,24 +169,39 @@ html {
     flex-shrink: 0;
     border-radius: 50%;
     background: #9c9175;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+    }
   }
 
   .footer__details {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 15px;
     width: 158px;
     min-height: 55px;
   }
 
-  .footer__details-text {
-    display: block;
+  .footer__details-text,
+  .footer__contact-text,
+  .footer__contact-time-line,
+  .footer__notice,
+  .footer__copyright,
+  .footer__policy {
     font-family: $font-family;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.25;
     color: $white;
+  }
+
+  .footer__details-text {
+    display: block;
+    line-height: 1.25;
   }
 
   .footer__main {
@@ -224,11 +239,12 @@ html {
   }
 
   .footer__menu-inner,
-  .footer__catalog-inner {
+  .footer__catalog-inner,
+  .footer__contacts-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 15px;
+    margin-top: 30px;
   }
 
   .footer__menu-text,
@@ -243,17 +259,10 @@ html {
     min-width: 0;
   }
 
-  .footer__contacts-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-  }
-
   .footer__contact-item {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     text-decoration: none;
     color: inherit;
   }
@@ -267,12 +276,58 @@ html {
     &--phone svg {
       display: block;
     }
+
+    &--address svg,
+    &--time svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    &--mail svg {
+      display: block;
+      width: 24px;
+      height: 19px;
+    }
   }
 
-  .footer__contact-text {
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 16px;
-    color: $white;
+  .footer__contact-time {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer__notice {
+    margin: 201px 0 0;
+    text-align: left;
+  }
+
+  .footer__divider {
+    margin-top: 15px;
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .footer__legal {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 485px;
+  }
+
+  .footer__copyright {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .footer__policy {
+    flex-shrink: 0;
+    text-align: right;
+    text-decoration: none;
   }
 }

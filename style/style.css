@@ -127,22 +127,35 @@ html {
   flex-shrink: 0;
   border-radius: 50%;
   background: #9c9175;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer__badge svg {
+  display: block;
 }
 .footer .footer__details {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 15px;
   width: 158px;
   min-height: 55px;
 }
-.footer .footer__details-text {
-  display: block;
+.footer .footer__details-text,
+.footer .footer__contact-text,
+.footer .footer__contact-time-line,
+.footer .footer__notice,
+.footer .footer__copyright,
+.footer .footer__policy {
   font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.25;
   color: #fff;
+}
+.footer .footer__details-text {
+  display: block;
+  line-height: 1.25;
 }
 .footer .footer__main {
   display: flex;
@@ -174,11 +187,12 @@ html {
   margin-right: 95px;
 }
 .footer .footer__menu-inner,
-.footer .footer__catalog-inner {
+.footer .footer__catalog-inner,
+.footer .footer__contacts-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 15px;
+  margin-top: 30px;
 }
 .footer .footer__menu-text,
 .footer .footer__catalog-text {
@@ -190,16 +204,10 @@ html {
 .footer .footer__contacts {
   min-width: 0;
 }
-.footer .footer__contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 12px;
-}
 .footer .footer__contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
   text-decoration: none;
   color: inherit;
 }
@@ -212,11 +220,50 @@ html {
 .footer .footer__contact-icon--phone svg {
   display: block;
 }
-.footer .footer__contact-text {
-  font-family: "Mulish", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #fff;
+.footer .footer__contact-icon--address svg,
+.footer .footer__contact-icon--time svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.footer .footer__contact-icon--mail svg {
+  display: block;
+  width: 24px;
+  height: 19px;
+}
+.footer .footer__contact-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer .footer__notice {
+  margin: 201px 0 0;
+  text-align: left;
+}
+.footer .footer__divider {
+  margin-top: 15px;
+  width: 100%;
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.footer .footer__legal {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 485px;
+}
+.footer .footer__copyright {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.footer .footer__policy {
+  flex-shrink: 0;
+  text-align: right;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
