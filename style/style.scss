@@ -761,3 +761,22 @@ html {
     color: $white;
   }
 }
+
+.bread-crumbs {
+  padding: 30px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+  }
+
+  p,
+  a,
+  span {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: #404040;
+  }
+}

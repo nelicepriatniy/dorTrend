@@ -634,4 +634,21 @@ html {
   color: #fff;
 }
 
+.bread-crumbs {
+  padding: 30px 0;
+}
+.bread-crumbs .container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.bread-crumbs p,
+.bread-crumbs a,
+.bread-crumbs span {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #404040;
+}
+
 /*# sourceMappingURL=style.css.map */
