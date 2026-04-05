@@ -33,33 +33,6 @@ $text-black-300: #474747;
 $bg-gray: #f8f8f8;
 $bg-black: #292929;
 $text-primary: #404040;
-$info-card-bg: #ebebeb;
-$info-card-radius: 18px;
-$info-card-padding: 28px 32px;
-
-// Общая типографика шаблона (как .regular-text / заголовки в макете)
-%regular-text {
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.regular-text {
-  @extend %regular-text;
-}
-
-%page-heading {
-  font-family: $font-family;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.2;
-  color: $text-primary;
-}
-
-.page-heading {
-  @extend %page-heading;
-}
 
 body,
 html {
@@ -73,134 +46,268 @@ html {
   margin: auto;
 }
 
-.page-delivery {
-  font-family: $font-family;
-  color: $text-primary;
-  background: $white;
-  padding-top: 30px;
-  padding-bottom: 80px;
+.page-main {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 30px 0 80px;
+}
 
-  &__intro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
+.bread-crumbs {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $text-primary;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.about-page {
+  &__body {
+    margin-top: 30px;
   }
 
-  &__title {
-    margin: 0;
-    text-align: left;
+  .page-title {
+    font-family: $font-family;
     font-weight: 400;
     font-size: 32px;
     line-height: 1.2;
+    color: $text-primary;
+    margin-bottom: 30px;
   }
 
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
+    align-items: start;
+  }
+
+  &__content {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $text-primary;
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__feedback {
+    margin-top: 30px;
+    box-sizing: border-box;
+    width: 209px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+    background: #9c9175;
+    cursor: pointer;
+
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+
+  &__lead {
+    font-weight: 400;
+  }
+
+  &__subheading {
+    font-weight: 400;
+    margin-top: 0.25em;
+  }
+
+  &__list {
+    list-style: disc outside;
+    padding-left: 1.5em;
+    margin: 0 0 1em;
+
+    li {
+      list-style: disc outside;
+      display: list-item;
+      margin-bottom: 0.5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 630px;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-page__columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages {
+  margin-top: 80px;
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $text-primary;
+  }
+
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    min-width: 0;
+    list-style: none;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    width: 300px;
+    height: 262px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon-wrap {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__card-text {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $text-primary;
+  }
+}
+
+@media (max-width: 1290px) {
+  .advantages__grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 660px) {
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__card {
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.manufacturers {
+  padding-top: 80px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider-container {
+    max-width: 100%;
+    padding: 0 110px;
+    position: relative;
+    background: #9c9175;
+  }
+
+  .slider-gold {
+    background: #9c9175;
+    padding: 80px 0 65px;
+    margin-top: 65px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #ebebeb;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet.active {
+    background: $white;
+  }
+
+  .manufac-p.swiper-pagination {
+    position: relative;
     margin-top: 60px;
   }
 
-  .info-card {
-    flex: 1 1 280px;
-    min-width: 0;
-    background: $info-card-bg;
-    border-radius: $info-card-radius;
-    padding: $info-card-padding;
-  }
+  .manufac-slider-prev {
+    left: 0;
 
-  .info-card--delivery,
-  .info-card--payment {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
-
-    .info-card__icon {
-      flex-shrink: 0;
-      width: 70px;
-      height: 70px;
-      border-radius: 100px;
-      background: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg {
-        display: block;
-      }
-    }
-
-    .info-card__title {
-      margin: 15px 0 0;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 1.4;
-    }
-
-    .info-card__text {
-      margin: 0;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 1.4;
-
-      &:first-of-type {
-        margin-top: 15px;
-      }
-    }
-
-    .info-card__text + .info-card__text {
-      margin-top: 12px;
-    }
-
-    .info-card__list {
-      margin: 12px 0 0;
-      padding-left: 1.35em;
-      list-style: disc outside;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 1.4;
-
-      li {
-        list-style: disc outside;
-        padding-left: 0.35em;
-
-        & + li {
-          margin-top: 12px;
-        }
-      }
+    svg {
+      rotate: 180deg;
     }
   }
 
-  .breadcrumbs {
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+  .manufac-slider-next {
+    right: 0;
+  }
 
-    &__item {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.2;
-
-      &:not(:last-child)::after {
-        content: " - ";
-      }
-    }
-
-    &__link {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    &__current {
-      color: inherit;
-    }
+  .manufac-slider-prev,
+  .manufac-slider-next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
