@@ -264,6 +264,8 @@ html {
       }
 
       &__lead {
+        box-sizing: border-box;
+        min-height: 68px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.4;
@@ -290,20 +292,24 @@ html {
       }
 
       &__input,
-      &__textarea {
-        box-sizing: border-box;
-        border: none;
-        background: $field-bg;
+      &__textarea,
+      &__consent-text {
+        font-family: $font-family;
+        font-weight: 500;
         font-size: 16px;
         color: $text-primary;
+      }
 
-        &::placeholder {
-          color: $text-primary;
-          opacity: 0.7;
-        }
+      &__input::placeholder,
+      &__textarea::placeholder {
+        color: $text-primary;
+        opacity: 0.7;
       }
 
       &__input {
+        box-sizing: border-box;
+        border: none;
+        background: $field-bg;
         padding: 0 15px;
         line-height: 50px;
 
@@ -326,14 +332,16 @@ html {
       }
 
       &__textarea {
-        display: block;
+        box-sizing: border-box;
         width: 850px;
         max-width: 100%;
         height: 100px;
         padding: 0 15px;
         border-radius: 20px;
+        background: $field-bg;
+        border: none;
+        resize: none;
         line-height: 1.4;
-        resize: vertical;
       }
 
       &__actions {
@@ -383,10 +391,7 @@ html {
       }
 
       &__consent-text {
-        font-weight: 500;
-        font-size: 16px;
         line-height: 1.4;
-        color: $text-primary;
       }
     }
   }

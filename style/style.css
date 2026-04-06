@@ -207,6 +207,8 @@ html {
   text-align: left;
 }
 .contacts-page__bottom .contacts-form__lead {
+  box-sizing: border-box;
+  min-height: 68px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
@@ -228,10 +230,9 @@ html {
   align-items: center;
   margin-bottom: 30px;
 }
-.contacts-page__bottom .contacts-form__input, .contacts-page__bottom .contacts-form__textarea {
-  box-sizing: border-box;
-  border: none;
-  background: #ebebeb;
+.contacts-page__bottom .contacts-form__input, .contacts-page__bottom .contacts-form__textarea, .contacts-page__bottom .contacts-form__consent-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #404040;
 }
@@ -240,6 +241,9 @@ html {
   opacity: 0.7;
 }
 .contacts-page__bottom .contacts-form__input {
+  box-sizing: border-box;
+  border: none;
+  background: #ebebeb;
   padding: 0 15px;
   line-height: 50px;
 }
@@ -257,14 +261,16 @@ html {
   margin-bottom: 30px;
 }
 .contacts-page__bottom .contacts-form__textarea {
-  display: block;
+  box-sizing: border-box;
   width: 850px;
   max-width: 100%;
   height: 100px;
   padding: 0 15px;
   border-radius: 20px;
+  background: #ebebeb;
+  border: none;
+  resize: none;
   line-height: 1.4;
-  resize: vertical;
 }
 .contacts-page__bottom .contacts-form__actions {
   display: flex;
@@ -309,10 +315,7 @@ html {
   accent-color: #404040;
 }
 .contacts-page__bottom .contacts-form__consent-text {
-  font-weight: 500;
-  font-size: 16px;
   line-height: 1.4;
-  color: #404040;
 }
 
 .header .header__top {
