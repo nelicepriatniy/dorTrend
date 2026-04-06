@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакты — Двери Trend</title>
+  <title>Document</title>
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="./style/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -54,165 +55,172 @@
     </div>
   </header>
 
-  <main class="page-main contacts-page">
-    <section class="contacts-page__top" aria-labelledby="contacts-heading">
+  <main>
+
+    <div class="bread-crumbs">
       <div class="container">
-        <nav class="bread-crumbs" aria-label="Хлебные крошки">
-          <a href="/">Главная</a>
-          <span class="bread-crumbs__sep" aria-hidden="true"> - </span>
-          <span class="bread-crumbs__current" aria-current="page">Контакты</span>
-        </nav>
-
-        <div class="contacts-page__top-inner">
-          <div class="contacts-page__intro">
-            <h1 id="contacts-heading" class="contacts-page__title">Контакты</h1>
-
-            <div class="contacts-page__details">
-              <p class="contacts-page__line">
-                Адрес: Адрес компании
-              </p>
-              <p class="contacts-page__line">
-                e-mail: <a href="mailto:info@mail.ru">info@mail.ru</a>
-              </p>
-              <p class="contacts-page__line">
-                Телефоны:
-                <a href="tel:+74950000000">+7 (495) 000-00-00</a>,
-                <a href="tel:+74951111111">+7 (495) 000-00-00</a>
-              </p>
-            </div>
-
-            <p class="contacts-page__social">
-              <a
-                class="contacts-page__telegram"
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Написать в Telegram"
-              >
-                <span class="contacts-page__telegram-badge" aria-hidden="true">
-                  <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18.321 1.40276L15.5484 14.4785C15.3392 15.4014 14.7937 15.6311 14.0185 15.1963L9.79386 12.0832L7.75539 14.0438C7.5298 14.2694 7.34113 14.458 6.90636 14.458L7.20988 10.1555L15.0398 3.0803C15.3802 2.77678 14.9659 2.60862 14.5107 2.91213L4.83097 9.00706L0.663783 7.70276C-0.242662 7.41975 -0.259068 6.79631 0.852455 6.36155L17.1521 0.0820558C17.9068 -0.200952 18.5671 0.25022 18.321 1.40276V1.40276Z"
-                      fill="white"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </p>
-          </div>
-
-          <figure class="contacts-page__figure">
-            <img
-              class="contacts-page__image"
-              src="./assets/imgs/contacts/1.png"
-              width="630"
-              height="299"
-              alt="Интерьер с дверями"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-        </div>
+        <a href="/" class="link">Главная</a>
+        <span>-</span>
+        <p>Фурнитура</p>
+      </div>
+    </div>
+    <section class="text-section">
+      <div class="container">
+        <h1 class="furniture-heaing">Фурнитура</h1>
+        <p class="text">
+          Чтобы ваши новые двери обрели завершенный вид, предлагаем подобрать к ним изящные дверные ручки. Это позволит
+          вам сэкономить время на поиски и улучшить общую выгоду. В нашем каталоге мы предлагаем исключительно надежные
+          и
+          эстетически привлекательные аксессуары, которые придадут вашему дверному комплекту как практичность, так и
+          неповторимый шарм.
+        </p>
       </div>
     </section>
-
-    <section class="contacts-page__middle" aria-label="Карта">
-      <div class="contacts-page__map-wrap">
-        <div class="contacts-page__map-frame">
-          <iframe
-            title="Crazy monkey bar — Google Карты"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45!2d116.0428125!3d-8.3479165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcddf75935ff8f9%3A0x1124e0d825a83b99!2sCrazy%20monkey%20bar!5e0!3m2!1sru!2sid!4v1!5m2!1sru!2sid"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="contacts-page__bottom" aria-labelledby="contacts-cta-heading">
+    <div class="furniture">
       <div class="container">
-        <div class="contacts-page__bottom-inner">
-          <form class="contacts-form" action="#" method="post" novalidate>
-            <div class="contacts-form__layout">
-              <div class="contacts-form__main">
-                <h2 id="contacts-cta-heading" class="contacts-form__title">
-                  Нужна помощь в выборе двери?
-                </h2>
-                <p class="contacts-form__lead">
-                  Оставьте заявку и наш менеджер свяжется с Вами в ближайшее время
-                </p>
-
-                <div class="contacts-form__row">
-                  <div class="contacts-form__field">
-                    <label class="visually-hidden" for="contacts-name">Имя</label>
-                    <input
-                      id="contacts-name"
-                      class="contacts-form__input contacts-form__input--name"
-                      name="name"
-                      type="text"
-                      placeholder="Имя"
-                      autocomplete="name"
-                    />
-                  </div>
-                  <div class="contacts-form__field">
-                    <label class="visually-hidden" for="contacts-email">Email</label>
-                    <input
-                      id="contacts-email"
-                      class="contacts-form__input contacts-form__input--email"
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      autocomplete="email"
-                    />
-                  </div>
-                  <div class="contacts-form__field">
-                    <label class="visually-hidden" for="contacts-phone">Телефон</label>
-                    <input
-                      id="contacts-phone"
-                      class="contacts-form__input contacts-form__input--phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="Телефон"
-                      autocomplete="tel"
-                    />
-                  </div>
-                </div>
-
-                <div class="contacts-form__field contacts-form__field--comment">
-                  <label class="visually-hidden" for="contacts-comment">Комментарий</label>
-                  <textarea
-                    id="contacts-comment"
-                    class="contacts-form__textarea"
-                    name="comment"
-                    rows="1"
-                    placeholder="Комментарий"
-                  ></textarea>
-                </div>
-
-                <div class="contacts-form__actions">
-                  <label class="contacts-form__consent">
-                    <input class="contacts-form__checkbox" name="consent" type="checkbox" required />
-                    <span class="contacts-form__consent-text">
-                      Я согласен на обработку мои персональных данных и принимаю условия политики конфиденциальности
-                    </span>
-                  </label>
-                  <button class="contacts-form__submit" type="submit">Отправить заявку</button>
-                </div>
+        <div class="catalog-right">
+          <div class="catalog-list">
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
               </div>
-
-              <figure class="contacts-page__cta-figure" aria-label="Команда">
-                <img
-                  class="contacts-page__cta-img"
-                  src="./assets/imgs/contacts/rectangle-40448.png"
-                  width="410"
-                  height="508"
-                  alt=""
-                />
-              </figure>
             </div>
-          </form>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./assets/imgs/catalog/1.png" alt="" class="bg">
+              <div class="info">
+                <p class="name">Межкомнатная дверь Novita Felicia</p>
+                <p class="attribute">цвет: золото</p>
+                <a href="" class="gold-button">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-pagination">
+            <div class="nums">
+              <div class="arrow-prev">
+                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.32031 0.5C9.55025 0.5 9.73598 0.563593 9.89648 0.693359L9.96289 0.753906L11.2373 2.03906L11.2451 2.04688C11.4202 2.21593 11.5 2.40547 11.5 2.64355C11.5 2.88167 11.4201 3.07117 11.2451 3.24023L5.65234 8.64063L5.28027 9L5.65234 9.35938L11.2451 14.7598C11.377 14.8872 11.4315 15.0014 11.4492 15.1035L11.4561 15.1436L11.4687 15.1816C11.5075 15.2939 11.5146 15.4303 11.4619 15.6084L11.4541 15.6357L11.4492 15.665C11.4333 15.757 11.3893 15.8373 11.2861 15.917L11.2607 15.9375L11.2373 15.9609L9.96289 17.2461C9.78709 17.4158 9.58307 17.5 9.32031 17.5C9.05759 17.5 8.85352 17.4158 8.67773 17.2461L0.754883 9.59668C0.579795 9.42759 0.5 9.23816 0.5 9C0.5 8.76184 0.579794 8.57241 0.754883 8.40332L8.67773 0.753906C8.85352 0.584168 9.05759 0.500016 9.32031 0.5Z"
+                    fill="white" stroke="#9C9175" />
+                </svg>
+              </div>
+              <div class="pag-wrapper">
+                <a class="num active">1</a>
+                <a href="" class="num ">2</a>
+                <a href="" class="num ">...</a>
+                <a href="" class="num ">24</a>
+              </div>
+              <div class="arrow-next">
+                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.32031 0.5C9.55025 0.5 9.73598 0.563593 9.89648 0.693359L9.96289 0.753906L11.2373 2.03906L11.2451 2.04688C11.4202 2.21593 11.5 2.40547 11.5 2.64355C11.5 2.88167 11.4201 3.07117 11.2451 3.24023L5.65234 8.64063L5.28027 9L5.65234 9.35938L11.2451 14.7598C11.377 14.8872 11.4315 15.0014 11.4492 15.1035L11.4561 15.1436L11.4687 15.1816C11.5075 15.2939 11.5146 15.4303 11.4619 15.6084L11.4541 15.6357L11.4492 15.665C11.4333 15.757 11.3893 15.8373 11.2861 15.917L11.2607 15.9375L11.2373 15.9609L9.96289 17.2461C9.78709 17.4158 9.58307 17.5 9.32031 17.5C9.05759 17.5 8.85352 17.4158 8.67773 17.2461L0.754883 9.59668C0.579795 9.42759 0.5 9.23816 0.5 9C0.5 8.76184 0.579794 8.57241 0.754883 8.40332L8.67773 0.753906C8.85352 0.584168 9.05759 0.500016 9.32031 0.5Z"
+                    fill="white" stroke="#9C9175" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
+
+      </div>
+    </div>
+    <section class="seo-text">
+      <div class="container">
+        <h4>
+          Межкомнатные двери: Гармония стиля, комфорта и функциональности для вашего дома
+        </h4>
+        <p>Добро пожаловать в раздел, где рождается гармония вашего дома! Межкомнатные двери – это не просто элементы,
+          разделяющие пространство. Это важная составляющая интерьера, которая формирует атмосферу, отражает ваш вкус и
+          обеспечивает необходимый уровень комфорта и приватности. В нашем каталоге представлен исчерпывающий
+          ассортимент
+          межкомнатных дверей, призванный удовлетворить самые взыскательные потребности и воплотить в жизнь любые
+          дизайнерские задумки.</p>
+        <p class="strong" style="font-size: 24px;">Почему выбор межкомнатных дверей так важен?</p>
+        <ul>
+          <li>Зонирование и приватность: Отделяя комнаты, двери создают личное пространство для каждого члена семьи,
+            обеспечивая тишину и покой.</li>
+          <li>Стиль и эстетика: Двери служат мощным визуальным акцентом, который может как подчеркнуть общую стилистику
+            интерьера, так и стать его самостоятельным художественным решением.</li>
+          <li>Функциональность: Современные двери обладают отличными показателями звукоизоляции, теплоизоляции, а также
+            устойчивы к внешним воздействиям.</li>
+          <li>Завершение образа: Правильно подобранные двери, в сочетании с фурнитурой и наличниками, придают интерьеру
+            законченный и элегантный вид.</li>
+        </ul>
+        <p class="strong" style="font-size: 24px;">Широкий ассортимент на любой вкус и бюджет:</p>
+
       </div>
     </section>
   </main>
@@ -324,12 +332,9 @@
     </div>
   </footer>
 
-<<<<<<< HEAD:contacts.html
-=======
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/sliders.js"></script>
   <script src="js/app.js"></script>
->>>>>>> main:index.html
 </body>
 
 </html>
