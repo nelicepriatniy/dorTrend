@@ -8,6 +8,21 @@
   outline: none;
 }
 
+.regular-text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.page-heading {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #404040;
+}
+
 body,
 html {
   background-color: #f3f3f3;
@@ -42,8 +57,123 @@ html {
   margin: auto;
 }
 
-.test {
-  height: 50vh;
+.page-delivery {
+  font-family: "Mulish", sans-serif;
+  color: #404040;
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+.page-delivery__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.page-delivery__title {
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.page-delivery__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 60px;
+}
+.page-delivery .info-card {
+  flex: 1 1 280px;
+  min-width: 0;
+  background: #ebebeb;
+  border-radius: 18px;
+  padding: 28px 32px;
+}
+.page-delivery .info-card--delivery,
+.page-delivery .info-card--payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+.page-delivery .info-card--delivery .info-card__icon,
+.page-delivery .info-card--payment .info-card__icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-delivery .info-card--delivery .info-card__icon svg,
+.page-delivery .info-card--payment .info-card__icon svg {
+  display: block;
+}
+.page-delivery .info-card--delivery .info-card__title,
+.page-delivery .info-card--payment .info-card__title {
+  margin: 15px 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.page-delivery .info-card--delivery .info-card__text,
+.page-delivery .info-card--payment .info-card__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.page-delivery .info-card--delivery .info-card__text:first-of-type,
+.page-delivery .info-card--payment .info-card__text:first-of-type {
+  margin-top: 15px;
+}
+.page-delivery .info-card--delivery .info-card__text + .info-card__text,
+.page-delivery .info-card--payment .info-card__text + .info-card__text {
+  margin-top: 12px;
+}
+.page-delivery .info-card--delivery .info-card__list,
+.page-delivery .info-card--payment .info-card__list {
+  margin: 12px 0 0;
+  padding-left: 1.35em;
+  list-style: disc outside;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.page-delivery .info-card--delivery .info-card__list li,
+.page-delivery .info-card--payment .info-card__list li {
+  list-style: disc outside;
+  padding-left: 0.35em;
+}
+.page-delivery .info-card--delivery .info-card__list li + li,
+.page-delivery .info-card--payment .info-card__list li + li {
+  margin-top: 12px;
+}
+.page-delivery .breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-delivery .breadcrumbs__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.page-delivery .breadcrumbs__item:not(:last-child)::after {
+  content: " - ";
+}
+.page-delivery .breadcrumbs__link {
+  color: inherit;
+  text-decoration: none;
+}
+.page-delivery .breadcrumbs__current {
+  color: inherit;
 }
 
 .header .header__top {
@@ -120,6 +250,7 @@ html {
 }
 
 .footer {
+  font-family: "Mulish", sans-serif;
   background: #404040;
   color: #fff;
   padding: 63px 0 24px;
@@ -134,7 +265,6 @@ html {
   align-items: flex-start;
 }
 .footer .footer__description-text {
-  font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
@@ -169,7 +299,6 @@ html {
 .footer .footer__notice,
 .footer .footer__copyright,
 .footer .footer__policy {
-  font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #fff;
@@ -192,7 +321,6 @@ html {
 .footer .footer__menu-title,
 .footer .footer__catalog-title,
 .footer .footer__contacts-title {
-  font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 140%;
@@ -217,7 +345,6 @@ html {
 }
 .footer .footer__menu-text,
 .footer .footer__catalog-text {
-  font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.5);
