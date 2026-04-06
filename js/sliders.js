@@ -47,8 +47,18 @@ const manufact_m_slider = new Swiper('.manufac-slider', {
   spaceBetween: 10,
   slidesPerView: 5,
   navigation: {
-    nextEl: '.manufac-slider-prev',
-    prevEl: '.manufac-slider-next',
+    nextEl: '.manufac-slider-next',
+    prevEl: '.manufac-slider-prev',
+  },
+});
+
+const models_slider = new Swiper('.card-slider', {
+  speed: 400,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  navigation: {
+    nextEl: '.card-img-section .hero-slider-next',
+    prevEl: '.card-img-section .hero-slider-prev',
   },
 });
 
