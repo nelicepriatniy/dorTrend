@@ -217,6 +217,18 @@ p {
     max-width: 100%;
   }
 
+
+  &__image {
+    width: 630px;
+    height: 299px;
+  }
+
+  &__cta-img {
+    width: 410px;
+    height: 508px;
+    max-width: 100%;
+  }
+
   @media (max-width: 1200px) {
     &__top-inner {
       grid-template-columns: 1fr;
