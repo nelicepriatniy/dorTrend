@@ -217,6 +217,18 @@ p {
     max-width: 100%;
   }
 
+
+  &__image {
+    width: 630px;
+    height: 299px;
+  }
+
+  &__cta-img {
+    width: 410px;
+    height: 508px;
+    max-width: 100%;
+  }
+
   @media (max-width: 1200px) {
     &__top-inner {
       grid-template-columns: 1fr;
@@ -1697,4 +1709,181 @@ p {
     }
   }
 
+}
+
+.services-page {
+  font-family: $font-family;
+  background: $white;
+  padding-top: 30px;
+  padding-bottom: 80px;
+
+  .bread-crumbs {
+    font-weight: 500;
+    font-size: 16px;
+    color: #404040;
+    text-align: left;
+    margin: 0;
+  }
+
+  .services-page__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: left;
+    color: #404040;
+  }
+
+  .services-page__measure,
+  .services-page__panel,
+  .services-page__install {
+    box-sizing: border-box;
+    margin-top: 60px;
+    width: 1290px;
+    max-width: 100%;
+  }
+
+  .services-page__panel,
+  .services-page__install {
+    min-height: 298px;
+  }
+
+  .services-page__measure-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 29px;
+    padding-top: 21.5px;
+  }
+
+  .services-page__panel-inner,
+  .services-page__install-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .services-page__measure-content {
+    flex: 1 1 631px;
+    min-width: 0;
+  }
+
+  .services-page__panel-content,
+  .services-page__install-content {
+    flex: 1 1 280px;
+    min-width: 0;
+  }
+
+  .services-page__panel-content {
+    padding-top: 59px;
+  }
+
+  .services-page__install-content {
+    padding-top: 70.5px;
+  }
+
+  .services-page__measure-title,
+  .services-page__panel-title,
+  .services-page__install-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #404040;
+    text-align: left;
+  }
+
+  .services-page__measure-figure,
+  .services-page__install-figure {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .services-page__panel-figure {
+    margin: 0;
+    width: 630px;
+    max-width: 100%;
+    height: 298px;
+  }
+
+  .services-page__measure-img,
+  .services-page__install-img {
+    display: block;
+    width: 630px;
+    max-width: 100%;
+    height: 298px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .services-page__panel-img {
+    display: block;
+    width: 630px;
+    max-width: 100%;
+    height: 298px;
+    border-radius: 20px;
+    object-fit: cover;
+    transform: rotate(-180deg);
+  }
+
+  .services-page__measure-text,
+  .services-page__panel-text,
+  .services-page__install-text {
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      color: #404040;
+    }
+  }
+
+  .services-page__measure-text {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 631px;
+    max-width: 100%;
+    height: 175px;
+
+    p + p {
+      margin-top: 1em;
+    }
+  }
+
+  .services-page__panel-text {
+    margin-top: 15px;
+
+    p + p {
+      margin-top: 1em;
+    }
+  }
+
+  .services-page__install-text {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 630px;
+    max-width: 100%;
+    height: 108px;
+    overflow: auto;
+  }
+
+  .services-page__measure-btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 217px;
+    height: 50px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    background: #9c9175;
+    border-radius: 100px;
+  }
 }

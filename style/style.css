@@ -1432,4 +1432,157 @@ p {
   transition: all 0.4s ease;
 }
 
+.services-page {
+  font-family: "Mulish", sans-serif;
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+.services-page .bread-crumbs {
+  font-weight: 500;
+  font-size: 16px;
+  color: #404040;
+  text-align: left;
+  margin: 0;
+}
+.services-page .services-page__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: left;
+  color: #404040;
+}
+.services-page .services-page__measure,
+.services-page .services-page__panel,
+.services-page .services-page__install {
+  box-sizing: border-box;
+  margin-top: 60px;
+  width: 1290px;
+  max-width: 100%;
+}
+.services-page .services-page__panel,
+.services-page .services-page__install {
+  min-height: 298px;
+}
+.services-page .services-page__measure-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 29px;
+  padding-top: 21.5px;
+}
+.services-page .services-page__panel-inner,
+.services-page .services-page__install-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+.services-page .services-page__measure-content {
+  flex: 1 1 631px;
+  min-width: 0;
+}
+.services-page .services-page__panel-content,
+.services-page .services-page__install-content {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.services-page .services-page__panel-content {
+  padding-top: 59px;
+}
+.services-page .services-page__install-content {
+  padding-top: 70.5px;
+}
+.services-page .services-page__measure-title,
+.services-page .services-page__panel-title,
+.services-page .services-page__install-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #404040;
+  text-align: left;
+}
+.services-page .services-page__measure-figure,
+.services-page .services-page__install-figure {
+  margin: 0;
+  flex: 0 0 auto;
+}
+.services-page .services-page__panel-figure {
+  margin: 0;
+  width: 630px;
+  max-width: 100%;
+  height: 298px;
+}
+.services-page .services-page__measure-img,
+.services-page .services-page__install-img {
+  display: block;
+  width: 630px;
+  max-width: 100%;
+  height: 298px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.services-page .services-page__panel-img {
+  display: block;
+  width: 630px;
+  max-width: 100%;
+  height: 298px;
+  border-radius: 20px;
+  object-fit: cover;
+  transform: rotate(-180deg);
+}
+.services-page .services-page__measure-text p,
+.services-page .services-page__panel-text p,
+.services-page .services-page__install-text p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #404040;
+}
+.services-page .services-page__measure-text {
+  box-sizing: border-box;
+  margin-top: 15px;
+  width: 631px;
+  max-width: 100%;
+  height: 175px;
+}
+.services-page .services-page__measure-text p + p {
+  margin-top: 1em;
+}
+.services-page .services-page__panel-text {
+  margin-top: 15px;
+}
+.services-page .services-page__panel-text p + p {
+  margin-top: 1em;
+}
+.services-page .services-page__install-text {
+  box-sizing: border-box;
+  margin-top: 15px;
+  width: 630px;
+  max-width: 100%;
+  height: 108px;
+  overflow: auto;
+}
+.services-page .services-page__measure-btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 217px;
+  height: 50px;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #9c9175;
+  border-radius: 100px;
+}
+
 /*# sourceMappingURL=style.css.map */
