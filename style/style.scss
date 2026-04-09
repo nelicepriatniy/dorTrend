@@ -122,6 +122,343 @@ p {
   }
 }
 
+// Страница «Доставка и оплата» (deliveryPayment.html)
+.page-delivery {
+  background: $white;
+  padding-top: $block-gap;
+  padding-bottom: 80px;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $block-gap;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: left;
+    color: $text-primary;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $block-gap;
+    margin-top: 60px;
+  }
+}
+
+.info-card {
+  flex: 1 1 280px;
+  min-width: 0;
+  background: $field-bg;
+  border-radius: 18px;
+  padding: 28px 32px;
+}
+
+.info-card--delivery,
+.info-card--payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+
+  .info-card__icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .info-card__title {
+    margin: 15px 0 0;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    color: $text-primary;
+  }
+
+  .info-card__text {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $text-primary;
+
+    &:first-of-type {
+      margin-top: 15px;
+    }
+  }
+
+  .info-card__text + .info-card__text {
+    margin-top: 12px;
+  }
+
+  .info-card__list {
+    margin: 12px 0 0;
+    padding-left: 1.35em;
+    list-style: disc outside;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $text-primary;
+
+    li {
+      list-style: disc outside;
+      padding-left: 0.35em;
+
+      & + li {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $text-primary;
+
+    &:not(:last-child)::after {
+      content: " - ";
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__current {
+    color: inherit;
+  }
+}
+
+// Страница «О нас» (about-us.html): только при наличии .about-page внутри main — не затрагивает контакты и др.
+.page-main:has(.about-page) {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 30px 0 80px;
+}
+
+.about-page {
+  &__body {
+    margin-top: $block-gap;
+  }
+
+  .page-title {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $text-primary;
+    margin: 0 0 $block-gap;
+    text-align: left;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $block-gap;
+    align-items: start;
+  }
+
+  &__content {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $text-primary;
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__feedback {
+    margin-top: $block-gap;
+    box-sizing: border-box;
+    width: 209px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 100px;
+    background: $brand-olive;
+    cursor: pointer;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+
+  &__lead {
+    font-weight: 400;
+  }
+
+  &__subheading {
+    font-weight: 400;
+    margin-top: 0.25em;
+  }
+
+  &__list {
+    list-style: disc outside;
+    padding-left: 1.5em;
+    margin: 0 0 1em;
+
+    li {
+      list-style: disc outside;
+      display: list-item;
+      margin-bottom: 0.5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 630px;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-page__columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Преимущества — используются только на about-us.html
+.advantages {
+  margin-top: 80px;
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $text-primary;
+  }
+
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: $block-gap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    min-width: 0;
+    list-style: none;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    width: 300px;
+    height: 262px;
+    padding: $block-gap;
+    border-radius: 20px;
+    background: $field-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon-wrap {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $block-gap;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__card-text {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $text-primary;
+  }
+}
+
+@media (max-width: 1290px) {
+  .advantages__grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 660px) {
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__card {
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Заголовок блока производителей на about-us.html
+.h2-heading--center {
+  text-align: center;
+  color: $text-primary;
+}
+
 // Круг под иконку: те же классы в HTML, общие правила одним списком (как группировка в футере)
 .footer__badge,
 .contacts-page__telegram-badge {

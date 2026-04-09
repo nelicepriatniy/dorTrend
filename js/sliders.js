@@ -61,4 +61,3 @@ const models_slider = new Swiper('.card-slider', {
     prevEl: '.card-img-section .hero-slider-prev',
   },
 });
-
