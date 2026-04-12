@@ -15,7 +15,6 @@ const popular_m_slider = new Swiper('.popuplar-m-slider', {
   speed: 400,
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 4,
   navigation: {
     nextEl: '.popupar-m-slider-next',
     prevEl: '.popupar-m-slider-prev',
@@ -24,6 +23,15 @@ const popular_m_slider = new Swiper('.popuplar-m-slider', {
     el: '.popular-m.swiper-pagination',
     type: 'bullets',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1024: {
+
+      slidesPerView: 4,
+    }
+  }
 });
 
 const popular_w_slider = new Swiper('.popuplar-w-slider', {
@@ -39,25 +47,50 @@ const popular_w_slider = new Swiper('.popuplar-w-slider', {
     el: '.popular-w.swiper-pagination',
     type: 'bullets',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1024: {
+
+      slidesPerView: 4,
+    }
+  }
 });
 
 const manufact_m_slider = new Swiper('.manufac-slider', {
   speed: 400,
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 5,
   navigation: {
     nextEl: '.manufac-slider-next',
     prevEl: '.manufac-slider-prev',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1024: {
+
+      slidesPerView: 5,
+    }
+  }
 });
 
 const models_slider = new Swiper('.card-slider', {
   speed: 400,
   spaceBetween: 10,
-  slidesPerView: 3,
   navigation: {
     nextEl: '.card-img-section .hero-slider-next',
     prevEl: '.card-img-section .hero-slider-prev',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1024: {
+
+      slidesPerView: 3,
+    }
+  }
 });
