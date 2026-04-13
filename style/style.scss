@@ -791,14 +791,16 @@ p {
     padding: 23px 0 28px;
 
     .container {
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
       align-items: center;
-      justify-content: space-between;
+      column-gap: 20px;
     }
   }
 
   .header__logo {
-    width: 178px;
+    width: 208px;
+    justify-self: start;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -838,7 +840,12 @@ p {
     }
   }
 
+  .header__top .container > .header-link {
+    justify-self: center;
+  }
+
   .header__top-content {
+    justify-self: end;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -2723,7 +2730,7 @@ body.nav-open {
   }
 
   .catalog-filters.mob {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 
     display: flex;
     justify-content: space-between;
