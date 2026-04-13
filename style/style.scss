@@ -491,6 +491,7 @@ p {
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 43.5px;
+    text-align: left;
   }
 
   &__details {
@@ -2137,35 +2138,36 @@ body.nav-open {
     }
   }
 
-  .policy-container {
-    display: flex;
-    gap: 10px;
-    align-items: center;
 
-    input {
-      display: none;
+}
 
-      &:checked+.policy-visual {
-        svg {
-          opacity: 1;
-        }
-      }
-    }
+.policy-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
-    .policy-visual {
-      border: 1px solid #404040;
-      border-radius: 4px;
-      width: 22px;
-      height: 23px;
-      background: white;
+  input {
+    display: none;
 
+    &:checked+.policy-visual {
       svg {
-        opacity: 0;
-        transition: all .4s ease;
+        opacity: 1;
       }
     }
   }
 
+  .policy-visual {
+    border: 1px solid #404040;
+    border-radius: 4px;
+    width: 22px;
+    height: 23px;
+    background: white;
+
+    svg {
+      opacity: 0;
+      transition: all .4s ease;
+    }
+  }
 }
 
 .services-page {
@@ -2191,19 +2193,20 @@ body.nav-open {
     color: #404040;
   }
 
-  .services-page__measure,
-  .services-page__panel,
-  .services-page__install {
+  .services-row-container {
     box-sizing: border-box;
     margin-top: 60px;
     width: 1290px;
     max-width: 100%;
+
+    &:nth-child(even) {
+
+      .services-row {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
-  .services-page__panel,
-  .services-page__install {
-    min-height: 298px;
-  }
 
   .services-page__measure-inner {
     display: flex;
@@ -2213,16 +2216,14 @@ body.nav-open {
     padding-top: 21.5px;
   }
 
-  .services-page__panel-inner,
-  .services-page__install-inner {
+  .services-row {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     gap: 30px;
+
   }
 
   .services-page__measure-content {
-    flex: 1 1 631px;
     min-width: 0;
   }
 
@@ -2264,24 +2265,19 @@ body.nav-open {
     height: 298px;
   }
 
-  .services-page__measure-img,
-  .services-page__install-img {
+  .services-page__measure-img {
     display: block;
-    width: 630px;
-    max-width: 100%;
-    height: 298px;
+    width: 100%;
+    max-width: 630px;
     border-radius: 20px;
     object-fit: cover;
   }
 
   .services-page__panel-img {
     display: block;
-    width: 630px;
     max-width: 100%;
-    height: 298px;
     border-radius: 20px;
     object-fit: cover;
-    transform: rotate(-180deg);
   }
 
   .services-page__measure-text,
@@ -2300,7 +2296,6 @@ body.nav-open {
     margin-top: 15px;
     width: 631px;
     max-width: 100%;
-    height: 175px;
 
     p+p {
       margin-top: 1em;
@@ -2318,9 +2313,7 @@ body.nav-open {
   .services-page__install-text {
     box-sizing: border-box;
     margin-top: 15px;
-    width: 630px;
     max-width: 100%;
-    height: 108px;
     overflow: auto;
   }
 
@@ -2342,8 +2335,10 @@ body.nav-open {
     color: $white;
     background: #9c9175;
     border-radius: 100px;
+    margin-top: 30px;
   }
 }
+
 
 .mob {
   display: none;
@@ -2351,6 +2346,91 @@ body.nav-open {
 
 .s-form .policy-container.mob {
   display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background: $white;
+  padding: 35px;
+  z-index: 11;
+  max-width: 700px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .heading {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: #404040;
+    margin-bottom: 20px;
+  }
+
+  .sub-heading {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    color: #404040;
+    max-width: 415px;
+  }
+
+  form {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 5px;
+
+    input {
+      border-radius: 100px;
+      padding: 15px 15px;
+      background: #ebebeb;
+      width: calc(50% - 2.5px);
+    }
+
+
+    .policy-text {
+
+      font-size: 14px;
+    }
+  }
+
+}
+
+.offset {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+
+  &.active {
+    opacity: .4;
+    visibility: visible;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -2795,4 +2875,114 @@ body.nav-open {
   .s-form .policy-container.mob {
     display: flex;
   }
+
+  .services-page .services-page__measure-inner,
+  .services-page .services-row-container:nth-child(2n) .services-row {
+    flex-direction: column-reverse;
+  }
+
+  .services-page .services-page__measure-content {
+    flex: 1;
+  }
+
+  .services-page .services-page__measure-text {
+    width: 100%;
+  }
+
+  .services-page .services-page__panel-content,
+  .services-page .services-page__install-content {
+    flex: auto;
+  }
+
+  .services-page .services-page__install-text {
+    height: auto;
+  }
+
+  .services-page .services-row {
+    flex-direction: column-reverse !important;
+  }
+
+  .services-row {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .info-card--delivery .info-card__title,
+  .info-card--payment .info-card__title {
+    font-size: 20px;
+  }
+
+  .info-card--delivery .info-card__list,
+  .info-card--payment .info-card__list,
+  .info-card--delivery .info-card__text:first-of-type,
+  .info-card--payment .info-card__text:first-of-type,
+  .info-card--delivery .info-card__text,
+  .info-card--payment .info-card__text {
+    font-size: 14px;
+  }
+
+  .page-delivery__title {
+    font-size: 20px;
+  }
+
+  .advantages__title {
+    font-size: 20px;
+  }
+
+
+  .advantages__card-text {
+
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .advantages__card {
+    height: auto;
+  }
+
+
+  .contacts-page__title {
+
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .contacts-page__figure {
+    display: none;
+  }
+
+  .contacts-page__bottom .contacts-form__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: #404040;
+  }
+
+  .contacts-page__bottom .contacts-form__lead {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #404040;
+  }
+
+  .contacts-page__bottom .contacts-form__row input,
+  .contacts-form__field {
+    width: 100%;
+  }
+
+  .contacts-page__cta-img {
+    display: none;
+  }
+
+  .contacts-page__bottom .contacts-form__textarea {
+    padding: 15px;
+  }
+
+  .popular.seems .container {
+    padding: 20px;
+  }
+
 }
